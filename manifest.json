@@ -1,0 +1,34 @@
+{
+    "name": "APSpace Styler",
+    "version": "0.1.0",
+    "description": "Personalize your own style on APSpace. Motivated by the crappy V3 update.",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://apspace.apu.edu.my/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://apspace.apu.edu.my/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "assets/miku-thumbnail.png"
+        ],
+        "matches": ["https://apspace.apu.edu.my/*"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "assets/apu.png",
+        "24": "assets/apu.png",
+        "32": "assets/apu.png"
+      },
+      "default_title": "APSpace Styler",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}

@@ -1,0 +1,52 @@
+<link href="popup.css" rel="stylesheet" type="text/css" />
+<div class="container">
+  <div>
+    <div class="title">APSpace customizing control panel</div>
+
+    <div class="control-panel" id="control-panel"></div>
+    <form id="controls" onsubmit="return false;">
+      <ul class="form-controls">
+        <li>
+          <label>Background Image URL: <span class="required">*</span></label>
+          <input type="text" name="ion-background-color" class="field-long" placeholder="https://i.imgur.com/A7Uj0Qm.png" value="" required />
+        </li>
+  
+        <li>
+          <label>Text Color: <span class="required">*</span></label>
+          <input type="text" name="ion-text-color" class="field-long" placeholder="#39CCB5" value="" required />
+        </li>
+        
+  
+        <li>
+          <label>Menu Item Background Color: <span class="required">*</span></label>
+          <input type="text" name="menu-item-bg" class="field-long" placeholder="RGB code:0,0,0" value="" required />
+        </li>
+        
+  
+        <li>
+          <label for="menu-item-bg-opacity">Menu Item Background Opacity: (0: Transparent, 1: Opaque) <span class="required">*</span></label>
+          <input type="range" id="menu-item-bg-opacity" name="menu-item-bg-opacity" value="0" min="0" max="1" step="0.01" oninput="this.nextElementSibling.value = this.value" required>
+          <output>0</output>
+        </li>
+        
+        
+        <li>
+          <label>Navigation Bar Color: <span class="required">*</span></label>
+          <input type="text" name="navbar-bg-color" class="field-long" placeholder="RGB code:0,0,0" value="" required />
+        </li>
+        
+  
+        <li>
+          <label for="navbar-bg-color-opacity">Navigation Bar Color Opacity: (0: Transparent, 1: Opaque) <span class="required">*</span></label>
+          <input type="range" id="navbar-bg-color-opacity" name="navbar-bg-color-opacity" value="0" min="0" max="1" step="0.01" oninput="this.nextElementSibling.value = this.value" required>
+          <output>0</output>
+        </li>
+        
+        <li>
+          <input type="button" name="apply" id="apply" value="Apply" />
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+<script type="module" src="popup.js"></script>
